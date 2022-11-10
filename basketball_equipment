@@ -1,0 +1,9 @@
+annual_tax_for_basketball=int(input())
+
+price_sneakers=annual_tax_for_basketball-(annual_tax_for_basketball*0.4)
+price_equipment=price_sneakers-(price_sneakers*0.2)
+price_ball=price_equipment*0.25
+price_accessory=price_ball*0.2
+total_price_equipment=annual_tax_for_basketball+price_sneakers+price_equipment+price_ball+price_accessory
+
+print(total_price_equipment)
