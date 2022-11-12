@@ -1,0 +1,33 @@
+trip_price = float (input())
+
+puzzle_count = int(input())
+dol_count = int (input())
+bears_count = int(input())
+minions_count = int(input())
+truck_count = int(input())
+
+total = puzzle_count * 2.6
+total += dol_count * 3
+total += bears_count * 4.1
+total += minions_count * 8.2
+total += truck_count * 2
+# print(total)
+
+total_count = puzzle_count + dol_count + bears_count + minions_count + truck_count
+# print(total_count)
+
+if total_count >= 50:
+    discount = total * 0.25
+    # print(discount)
+    total -= discount
+
+rent = total * 0.1
+# print(rent)
+total -= rent
+# print(total)
+
+if total >= trip_price:
+    print(f'Yes! {total - trip_price:.2f} lv left.')
+else:
+    print(f'Not enough money! {trip_price - total:.2f} lv needed.')
+
