@@ -1,0 +1,27 @@
+#input
+
+budget_movie = float(input())
+actor_count = int(input())
+suit_price = float(input())
+
+sum_decor = budget_movie * 0.1
+
+#print(sum_decor)
+
+sum_suit_price = actor_count * suit_price
+if actor_count > 150:
+    sum_suit_price -= sum_suit_price * 0.1
+
+#print(sum_suit_price)
+
+total_movie = sum_decor + sum_suit_price
+
+
+if total_movie <= budget_movie:
+    print('Action!')
+    print(f'Wingard starts filming with {budget_movie - total_movie:.2f} leva left.')
+else:
+    print('Not enough money!')
+    print(f'Wingard needs {total_movie - budget_movie:.2f} leva more.')
+
+
