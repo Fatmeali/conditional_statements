@@ -1,0 +1,20 @@
+budget = float(input())
+gpu_count = int(input())
+cpu_count = int(input())
+ram_count = int(input())
+
+all_gpu_price = gpu_count * 250
+cpu_price = all_gpu_price * 0.35
+all_cpu_price = cpu_price * cpu_count
+ram_price = all_gpu_price * 0.1
+all_ram_price = ram_price * ram_count
+
+total_price = all_gpu_price + all_cpu_price + all_ram_price
+if gpu_count > cpu_count:
+    total_price -= total_price * 0.15
+
+
+if budget >= total_price:
+    print(f'You have {budget - total_price:.2f} leva left!')
+else:
+    print(f'Not enough money! You need {total_price - budget:.2f} leva more!')
